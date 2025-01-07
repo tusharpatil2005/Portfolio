@@ -1,0 +1,630 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding-top: 80px; /* Adjusts the body content so it's not hidden behind the navbar */
+}
+
+/* Navbar Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(255, 255, 6); /* Navbar stays yellow */
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed; /* Makes the navbar fixed at the top */
+    top: 0; /* Keeps it at the top */
+    left: 0; /* Ensures it's aligned to the left */
+    right: 0; /* Ensures it's aligned to the right */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    animation: slideIn 0.5s ease-out; /* Adds the slide-in animation */
+}
+
+/* The rest of the navbar and other styles remain unchanged */
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+    background-color: yellow;
+}
+
+.nav-links a:hover {
+    color: rgb(255, 0, 0);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links */
+    }
+}
+/* Full Page Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+   
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Optional: You can adjust this based on your design */
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .intro {
+    max-width: 500px; /* Adjust width for the text */
+    padding-left: 20px;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ddd;
+    color: #fff;
+}
+
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon.twitter {
+    background-color: #00acee;
+}
+
+.social-icon.instagram {
+    background-color: #e4405f;
+}
+
+.social-icon.linkedin {
+    background-color: #0e76a8;
+}
+
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-image img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .cta-button {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  
+
+
+/* About me  section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .about-content {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content h2 {
+      font-size: 2rem;
+    }
+  
+    .about-image img {
+      width: 250px;
+    }
+  }
+
+
+  /* PROJECT Styling */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .project-description {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .project-description h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .project-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .project-link {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .project-video {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .project-video video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reverse Layout for Second Project */
+  .project-card .project-video {
+    order: -1; /* Moves the video to the left side */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-description {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .project-video video {
+      height: 300px;
+    }
+  }
+/* SKILL Styling */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row by default */
+    gap: 50px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Make sure each card takes full width in its grid cell */
+    max-width: 300px; /* Max width to keep cards from growing too large */
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: 1fr; /* 1 card per row */
+    }
+    .skill-card {
+      max-width: 100%; /* Cards take up the full width on smaller screens */
+    }
+  }
+    
+
+
+  /* CONTACT Styling */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 600px; /* Max width for the form */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for the button */
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 1rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+
+  /* Overall Page Layout */
+html, body {
+    height: 100%; /* Make sure the body takes full viewport height */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .content-wrapper {
+    min-height: 100%; /* Ensure the wrapper takes at least 100% of the page height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icon:hover img {
+    opacity: 0.7;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .social-icons {
+      margin-top: 10px;
+    }
+  }
+  

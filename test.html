@@ -1,0 +1,104 @@
+<div class="hero-section">
+    <!-- Left Side: Profile Image -->
+    <div class="hero-left">
+      <img src="https://via.placeholder.com/300" alt="Profile Image">
+    </div>
+  
+    <!-- Right Side: Introduction and Social Media Icons -->
+    <div class="hero-right">
+      <h1>Hi, I'm Tushar</h1>
+      <p>I'm a passionate web developer with a focus on creating dynamic and responsive websites. I love building user-friendly interfaces and solving problems through code.</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank">🔗</a>
+        <a href="https://github.com" target="_blank">🐙</a>
+        <a href="https://twitter.com" target="_blank">🐦</a>
+        <a href="https://instagram.com" target="_blank">📸</a>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .hero-section {
+      display: flex;
+      align-items: center;  /* Center vertically */
+      justify-content: center;  /* Center horizontally */
+      height: 100vh; /* Full height of the viewport */
+      padding: 50px;
+      background-color: #fff;
+      text-align: center;
+    }
+  
+    .hero-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero-left img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .hero-right {
+      flex: 1;
+      padding-left: 50px;
+    }
+  
+    .hero-right h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    .hero-right p {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  
+    .social-icons a {
+      margin-right: 20px;
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s;
+    }
+  
+    .social-icons a:hover {
+      color: #0077b5; /* Hover color (LinkedIn blue) */
+    }
+  
+    /* Media Query for Smaller Screens */
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+  
+      .hero-left {
+        margin-bottom: 30px;
+      }
+  
+      .hero-left img {
+        width: 250px;
+        height: 250px;
+      }
+  
+      .hero-right {
+        padding-left: 0;
+      }
+  
+      .hero-right h1 {
+        font-size: 36px;
+      }
+  
+      .hero-right p {
+        font-size: 18px;
+      }
+    }
+  </style>
+  
